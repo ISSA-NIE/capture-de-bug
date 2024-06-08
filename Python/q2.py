@@ -36,7 +36,6 @@ class BST:
             self._postorder(root.left)
             print(root.key, end=' ')
 
-# Example usage:
 tree = BST()
 tree.insert(50)
 tree.insert(30)
@@ -46,4 +45,4 @@ tree.insert(70)
 tree.insert(60)
 tree.insert(80)
 
-tree.postorder()  # Should print 20 40 30 60 80 70 50
+tree.postorder()  

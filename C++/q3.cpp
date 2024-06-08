@@ -16,7 +16,7 @@ string encrypt(string text, int shift) {
 }
 
 string decrypt(string text, int shift) {
-    return encrypt(text, 26 - shift); // Decryption is simply encryption with opposite shift
+    return encrypt(text, 26 - shift); 
 }
 
 int main() {

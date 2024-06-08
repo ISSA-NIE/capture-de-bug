@@ -9,7 +9,7 @@ def encrypt(text, shift):
     return result
 
 def decrypt(text, shift):
-    return encrypt(text, 26 - shift)  # Decryption is simply encryption with opposite shift
+    return encrypt(text, 26 - shift) 
 
 text = "Hello, World!"
 shift = 3

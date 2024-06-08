@@ -13,7 +13,7 @@ public class CaesarCipher {
     }
 
     static String decrypt(String text, int shift) {
-        return encrypt(text, 26 - shift); // Decryption is simply encryption with opposite shift
+        return encrypt(text, 26 - shift); 
     }
 
     public static void main(String[] args) {

@@ -54,7 +54,7 @@ int main() {
     tree.insert(60);
     tree.insert(80);
 
-    tree.postorder();  // Should print 20 40 30 60 80 70 50
+    tree.postorder(); 
 
     return 0;
 }
