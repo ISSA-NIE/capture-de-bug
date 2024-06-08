@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Py String</title>
+    <style>
+      #objective{
+        margin: 20px;
+        border-radius: 4px;
+      }
+    </style>
+</head>
+<body>
+    <div>
+      <fieldset id="objective">
+        <legend><b>Objective / hint</b></legend>
+        <b>Example Output</b><br/>
+        If entered text contains 'py' as prefix then output will be same text else add 'py' as  prefix to the text and display.
+        <p><label for="">Enter String</label>
+        <input type="text" readonly value="sometext"><button style="margin-left:5px">Check String</button>
+        <div>pysometext</div></p>
+      </fieldset>
+    </div>
+    <label for="">Enter String</label>
+    <input type="text" name="" id="st">
+    <button onclick="check">Check String</button>
+
+    <p id="ans"></p>
+
+    <script>
+        function check(){
+            const str = document.getElementByid('str').values;
+
+            if(str.slice(0, 2) == 'py'){
+                document,getElementById('ans').innerhtml = str;
+            }
+            else{
+                const s = "py"+str;
+                document.getElementById('ans').innerhtml = s;
+            }
+        }
+    </script>
+</body>
+</html>
