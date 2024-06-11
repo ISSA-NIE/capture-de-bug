@@ -18,3 +18,7 @@ if name == "main":
     fc = FlyCar("SuperFly", "Black", 5000)
     fc.drive()
     fc.fly()
+
+# Expected Output
+# SuperFly Car is driving
+# SuperFly Car is flying

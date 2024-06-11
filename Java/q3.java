@@ -17,7 +17,7 @@ public class CaesarCipher {
     }
 
     public static void main(String[] args) {
-        String text = "Hello, World!";
+        String text = "ISSA is a CyberSecurity Club";
         int shift = 3;
 
         String encryptedText = encrypt(text, shift);
@@ -28,3 +28,8 @@ public class CaesarCipher {
         System.out.println("Decrypted Text: " + decryptedText);
     }
 }
+
+// Expected Output
+// Original Text: ISSA is a CyberSecurity Club
+// Encrypted Text: LVVD lv d FbehuVhfxulwb Foxe
+// Decrypted Text: ISSA is a CyberSecurity Club

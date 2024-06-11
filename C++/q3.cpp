@@ -20,7 +20,7 @@ string decrypt(string text, int shift) {
 }
 
 int main() {
-    string text = "Hello";
+    string text = "ISSA is a CyberSecurity Club";
     int shift = 3;
 
     string encrypted_text = encrypt(text, shift);
@@ -32,3 +32,9 @@ int main() {
 
     return 0;
 }
+
+
+// Expected Output:
+// Original Text: ISSA is a CyberSecurity Club
+// Encrypted Text: LVVD lv d FbehuVhfxulwb Foxe
+// Decrypted Text: ISSA is a CyberSecurity Club

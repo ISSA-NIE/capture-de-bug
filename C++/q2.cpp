@@ -58,3 +58,6 @@ int main() {
 
     return 0;
 }
+
+// Expected Output:
+// Should print 20 40 30 60 80 70 50

@@ -46,3 +46,6 @@ tree.insert(60)
 tree.insert(80)
 
 tree.postorder()  
+
+# Expected Output
+# Should print 20 40 30 60 80 70 50

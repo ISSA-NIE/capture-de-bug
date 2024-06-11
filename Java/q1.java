@@ -6,6 +6,7 @@ class Car {
     int engineHP;
 
     Car() {
+        System.out.print(name);
     }
 
     Car(String name, String color, int engineHP) {
@@ -40,3 +41,7 @@ public class Main {
         fc.fly();
     }
 }
+
+// Expected Output:
+// SuperFly Car is driving
+// SuperFly Car is flying

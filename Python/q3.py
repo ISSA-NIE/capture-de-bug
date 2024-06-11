@@ -11,7 +11,7 @@ def encrypt(text, shift):
 def decrypt(text, shift):
     return encrypt(text, 26 - shift) 
 
-text = "Hello, World!"
+text = "ISSA is a CyberSecurity Club"
 shift = 3
 
 encrypted_text = encrypt(text, shift)
@@ -20,3 +20,5 @@ decrypted_text = encrypt(encrypted_text, shift)
 print("Original Text:", text)
 print("Encrypted Text:", encrypted_text)
 print("Decrypted Text:", decrypted_text)
+
+# Expected Output
