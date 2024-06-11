@@ -16,7 +16,7 @@
     <div>
       <fieldset id="objective">
         <legend><b>Objective / hint</b></legend>
-        <b>Example Output</b><br/>
+        <b>Example Output</b><br />
         If entered text contains 'py' as prefix then output will be same text else add 'py' as  prefix to the text and display.
         <p><label for="">Enter String</label>
         <input type="text" readonly value="sometext"><button style="margin-left:5px">Check String</button>
@@ -34,7 +34,7 @@
             const str = document.getElementByid('str').values;
 
             if(str.slice(0, 2) == 'py'){
-                document,getElementById('ans').innerhtml = str;
+                document.getElementById('ans').innerhtml = str;
             }
             else{
                 const s = "py"+str;
