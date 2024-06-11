@@ -10,9 +10,9 @@ string encrypt(string text, int shift) {
         if (isalpha(c)) {
             char base = isupper(c) ? 'A' : 'a';
             
-            // result += static_cast<char>((c - base + shift) % 26 + c);
-            result += int(c-base);
-            cout<<result;
+            result += static_cast<char>((c - base + shift) % 26 + base);
+            
+            // cout<<int(c-base);
         } else {
             result += c;
         }
@@ -21,7 +21,7 @@ string encrypt(string text, int shift) {
 }
 
 string decrypt(string text, int shift) {
-    return encrypt(text, 26 - shift); 
+    return encrypt(text,  26-shift); 
 }
 
 int main() {
