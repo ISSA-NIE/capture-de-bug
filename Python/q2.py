@@ -1,11 +1,11 @@
 class Node:
-    def _init_(self, key):
+    def __init__(self, key):
         self.key = key
         self.left = None
         self.right = None
 
 class BST:
-    def _init_(self):
+    def __init__(self):
         self.root = None
 
     def insert(self, key):
@@ -18,13 +18,13 @@ class BST:
         if key < root.key:
             if root.left is None:
                 root.left = Node(key)
-        else:
-            self._insert(root.right, key)
+            else:
+                self._insert(root.left, key)
         else:
             if root.right is None:
                 root.right = Node(key)
             else:
-                self._insert(root.left, key)
+                self._insert(root.right, key)
 
     def postorder(self):
         self._postorder(self.root)
@@ -32,8 +32,8 @@ class BST:
 
     def _postorder(self, root):
         if root:
-            self._postorder(root.right)
             self._postorder(root.left)
+            self._postorder(root.right)
             print(root.key, end=' ')
 
 tree = BST()
