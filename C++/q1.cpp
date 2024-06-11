@@ -1,45 +1,50 @@
-#include<iostream>
+#include <iostream>
+#include <string>
 
-class Car {
+using namespace std;
+
+class Car
+{
 public:
     string name;
     string color;
     int engineHP;
 
-    Car() {
-        cout << name <<endl;
+    Car() : name(""), color(""), engineHP(0)
+    {
+        cout << name << endl;
     }
 
     Car(string name, string color, int engineHP)
         : name(name), color(color), engineHP(engineHP) {}
 
-    void drive() {
+    void drive()
+    {
         cout << name << " Car is driving\n";
     }
 };
 
-class FlyingCar : private Car {
+class FlyingCar : public Car
+{
 public:
     FlyingCar() {}
 
-    FlyingCar(string name, string color, int engineHP) {
-        this->name = name;
-        this->color = color;
-        this->engineHP = engineHP;
-    }
+    FlyingCar(string name, string color, int engineHP) : Car(name, color, engineHP) {}
 
-    void fly() {
+    void fly()
+    {
         cout << name << " Car is flying\n";
     }
 };
 
-int main() {
-    FlyCar fc("SuperFly", "Black", 5000);
+int main()
+{
+    FlyingCar fc("SuperFly", "Black", 5000);
     fc.drive();
     fc.fly();
+    return 0;
 }
 
-
-// Expected Output : 
+// Expected Output :
 // SuperFly Car is driving
 // SuperFly Car is flying
