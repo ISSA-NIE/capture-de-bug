@@ -1,140 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <span></span>
-  <head>
+<head>
     <title>Application Form</title>
-    <link rel="stylesheet" href="application.css" >
+    <link rel="stylesheet" href="application.css">
     <style>
-      *{
-    box-sizing: border-box;
-    
-}
-em{
-    color: red;
-}
-
-input[type="text"],input[type="date"],input[type="number"],input[type="email"],select,textarea{
-border: 1px solid;
-border-radius: 3px;
-padding: 3px;
-margin: 3px;
-width: 100%;
-}
-select{
-    cursor: pointer;
-}
-input[type="radio"],input[type="date"]{
-    cursor: pointer;
-}
-
-body{
-    font-family:'Trebuchet M S','Lucida Sans', Arial, sans-serif;
-
-    padding: 20px;
-
-}
-.container{
-    border-radius: 8px;
-    padding:10px;
-    background-color: rgb(221, 220, 220);
-    width:100%;
-}
-
-header{
-    font-size: 25px;
-    text-align: center;
-    width: 100%;
-
-}
-
-
-fieldset{
- border-radius: 9px;
- border-color:rgb(0, 174, 255); 
- background-color: rgb(246, 246, 246);  
-}
-input[type="submit"]{
-    border: none;
-    border-radius: 4px;
-    background-color: rgb(101, 187, 101);
-    padding: 10px;
-    color: honeydew;
-}
-input[type="reset"]{
-    border: none;
-    border-radius: 4px;
-    background-color: lightcoral;
-    padding: 10px;
-    color: lightcyan;
-}
-input[type="submit"]:hover{
-background-color: rgb(6, 180, 6);
-cursor:pointer;
-}
-input[type="reset"]:hover{
-    background-color: rgb(224, 55, 55);
-    cursor: pointer;
-}
+        * {
+            box-sizing: border-box;
+        }
+        em {
+            color: red;
+        }
+        input[type="text"], input[type="date"], input[type="number"], input[type="email"], select, textarea {
+            border: 1px solid;
+            border-radius: 3px;
+            padding: 3px;
+            margin: 3px;
+            width: 100%;
+        }
+        select {
+            cursor: pointer;
+        }
+        input[type="radio"], input[type="date"] {
+            cursor: pointer;
+        }
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            border-radius: 8px;
+            padding: 10px;
+            background-color: rgb(221, 220, 220);
+            width: 100%;
+        }
+        header {
+            font-size: 25px;
+            text-align: center;
+            width: 100%;
+        }
+        fieldset {
+            border-radius: 9px;
+            border-color: rgb(0, 174, 255);
+            background-color: rgb(246, 246, 246);
+        }
+        input[type="submit"] {
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(101, 187, 101);
+            padding: 10px;
+            color: honeydew;
+        }
+        input[type="reset"] {
+            border: none;
+            border-radius: 4px;
+            background-color: lightcoral;
+            padding: 10px;
+            color: lightcyan;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(6, 180, 6);
+            cursor: pointer;
+        }
+        input[type="reset"]:hover {
+            background-color: rgb(224, 55, 55);
+            cursor: pointer;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="do not change this block">
-        <div style="margin:10px; height:auto">
-          <legend><b>Objective / Hint </b>
-          <div>
-            <b>Expected Output after submitting</b>
-            <p>
-              <div><b>Name : </b>ISSA</div>
-              <div><b>Gender : </b>Male</div>
-              <div><b>Date of Birth : </b>2024-06-06</div>
-              <div><b>E-mail : </b>issa@nie.ac.in</div>
-              <div><b>Mobile No. : </b>9874563210</div>
-              <div><b>Address : </b>NIE MYSORE</div>
-            </p>
-          </div>
-          </legend>
+        <div style="margin: 10px; height: auto;">
+            <legend><b>Objective / Hint </b>
+                <div>
+                    <b>Expected Output after submitting</b>
+                    <p>
+                        <div><b>Name : </b>ISSA</div>
+                        <div><b>Gender : </b>Male</div>
+                        <div><b>Date of Birth : </b>2024-06-06</div>
+                        <div><b>E-mail : </b>issa@nie.ac.in</div>
+                        <div><b>Mobile No. : </b>9874563210</div>
+                        <div><b>Address : </b>NIE MYSORE</div>
+                    </p>
+                </div>
+            </legend>
         </div>
-      </div>
+    </div>
     <div class="container">
-   <form action="student.html" id="myForm">
-    <header>Application Form</header><hr/><br>
-    <fieldset>
-        <legend>Personal information</legend>
-        <p class="name">1. Applicant Name :<em>*</em><input type="number" id="aname" required width="100%" /></p>
-        <p class="gender" >
-           2. Gender:<em>*</em> <input type="radio" name="gender" required id="genderm" value="Male" />Male
-            <input type="radio" name="gender" required id="genderf" value="Female" />Female
-            <p class="dob">3. Date of Birth :<em>*</em> <input type="date" required name="adob"/></p>
-           <p> 4. Email id : <em>*</em><input type="email" required id="aemail"></p>
-            <p>
-               5.  Student Mobile No : <em>*</em><input id="amobileno" required type="number">
-          </p>
-          <p>
-           6.  Address :<em>*</em><em> <textarea class="area" required rows="2" id="aaddress" cols="30"></textarea></em>
-    <br>
-    </p>
-<P class="final" align="center"><input type="submit" value="Submit">
-<input type="reset"></P>
-</fieldset>
-</form>
-</div>
-  </body>
-  <script>
-    const form = document.getElementById('myform');
+        <form action="student.html" id="myForm">
+            <header>Application Form</header>
+            <hr /><br>
+            <fieldset>
+                <legend>Personal information</legend>
+                <p class="name">1. Applicant Name :<em>*</em><input type="text" id="aname" required /></p>
+                <p class="gender">
+                    2. Gender:<em>*</em> <input type="radio" name="gender" required id="genderm" value="Male" />Male
+                    <input type="radio" name="gender" required id="genderf" value="Female" />Female
+                </p>
+                <p class="dob">3. Date of Birth :<em>*</em> <input type="date" required name="adob" id="adob" /></p>
+                <p>4. Email id : <em>*</em><input type="email" required id="aemail"></p>
+                <p>5. Student Mobile No : <em>*</em><input id="amobileno" required type="number"></p>
+                <p>6. Address :<em>*</em><textarea class="area" required rows="2" id="aaddress" cols="30"></textarea><br></p>
+                <p class="final" align="center"><input type="submit" value="Submit">
+                    <input type="reset"></p>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('myForm');
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             const aname = document.getElementById("aname").value;
             const agender = document.querySelector('input[name="gender"]:checked').value;
-            const adob = document.getElementByName("adob").value;
+            const adob = document.getElementById("adob").value;
             const aemail = document.getElementById("aemail").value;
             const amobileno = document.getElementById("amobileno").value;
-            const aaddress = document.getElementById("address").value;
-            document.write("<b>Name : </b>"+aname+"<br>");
-            document.write("<b>Gender : </b>"+agender+"<br>");
-            document.write("<b>Date of Birth : </b>"+adob+"<br>");
-            document.write("<b>E-mail : </b>"+aemail+"<br>");
-            document.write("<b>Mobile No. : </b>"+amobileno+"<br>");
-            document.write("<b>Address : </b>"+aaddress+"<br>");
+            const aaddress = document.getElementById("aaddress").value;
+            document.write("<b>Name : </b>" + aname + "<br>");
+            document.write("<b>Gender : </b>" + agender + "<br>");
+            document.write("<b>Date of Birth : </b>" + adob + "<br>");
+            document.write("<b>E-mail : </b>" + aemail + "<br>");
+            document.write("<b>Mobile No. : </b>" + amobileno + "<br>");
+            document.write("<b>Address : </b>" + aaddress + "<br>");
         });
-  </script>
+    </script>
+</body>
 </html>

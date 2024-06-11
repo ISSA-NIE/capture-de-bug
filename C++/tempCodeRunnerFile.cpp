@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -41,8 +39,3 @@ int main()
 
     return 0;
 }
-
-// Expected Output:
-//  Original Text: ISSA is a CyberSecurity Club
-//  Encrypted Text: LVVD lv d FbehuVhfxulwb Foxe
-//  Decrypted Text: ISSA is a CyberSecurity Club
