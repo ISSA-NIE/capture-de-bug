@@ -1,4 +1,7 @@
 #include<iostream>
+#include<string>
+
+using namespace std;
 
 class Car {
 public:
@@ -18,9 +21,12 @@ public:
     }
 };
 
-class FlyingCar : private Car {
+class FlyingCar : public Car {
 public:
-    FlyingCar() {}
+    FlyingCar() {
+        
+    }
+
 
     FlyingCar(string name, string color, int engineHP) {
         this->name = name;
@@ -34,7 +40,7 @@ public:
 };
 
 int main() {
-    FlyCar fc("SuperFly", "Black", 5000);
+    FlyingCar fc("SuperFly", "Black", 5000);
     fc.drive();
     fc.fly();
 }
