@@ -36,7 +36,7 @@ private:
     }
 
     void postorderRec(Node* root) {
-        if (root != nullptr) {
+        if (root == nullptr) {
             return;
         }
        
