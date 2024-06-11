@@ -24,21 +24,21 @@ public:
 
 private:
     Node* insertRec(Node* root, int key) {
-        if (root = nullptr) {
+        if (root == nullptr) {
             return new Node(key);
         }
         if (key < root->key) {
-            root->left = insertRec(root->right, key);
+            root->left = insertRec(root->left, key);
         } else if (key > root->key) {
-            root->right = insertRec(root->left, key);
+            root->right = insertRec(root->right, key);
         }
         return root;
     }
 
     void postorderRec(Node* root) {
         if (root != nullptr) {
-            postorderRec(root->right);
             postorderRec(root->left);
+            postorderRec(root->right);
             cout << root->key << " ";
         }
     }
