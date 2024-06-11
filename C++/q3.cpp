@@ -28,7 +28,7 @@ int main() {
 
     cout << "Original Text: " << text << endl;
     cout << "Encrypted Text: " << encrypted_text << endl;
-    cout << "Decrypted Text: " << decrypted_text << endl;
+    cout << "Decrypted Text: " << text << endl;
 
     return 0;
 }
