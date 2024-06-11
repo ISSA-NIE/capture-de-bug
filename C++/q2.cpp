@@ -1,50 +1,64 @@
 #include <iostream>
 using namespace std;
 
-struct Node {
+struct Node
+{
     int key;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
     Node(int key) : key(key), left(nullptr), right(nullptr) {}
 };
 
-class BST {
+class BST
+{
 public:
-    Node* root;
+    Node *root;
     BST() : root(nullptr) {}
 
-    void insert(int key) {
+    void insert(int key)
+    {
         root = insertRec(root, key);
     }
 
-    void postorder() {
+    void postorder()
+    {
         postorderRec(root);
         cout << endl;
     }
 
 private:
-    Node* insertRec(Node* root, int key) {
-        if (root = nullptr) {
+    Node *insertRec(Node *root, int key)
+    {
+        if (root == nullptr)
+        { // It was comparison not assignment
             return new Node(key);
         }
-        if (key < root->key) {
-            root->left = insertRec(root->right, key);
-        } else if (key > root->key) {
-            root->right = insertRec(root->left, key);
+        // Recursive calls were wrong
+        if (key < root->key)
+        {
+            root->left = insertRec(root->left, key);
+        }
+        else if (key > root->key)
+        {
+            root->right = insertRec(root->right, key);
         }
         return root;
     }
 
-    void postorderRec(Node* root) {
-        if (root != nullptr) {
-            postorderRec(root->right);
+    // Atleast write correct preorder code
+    void postorderRec(Node *root)
+    {
+        if (root != nullptr)
+        {
             postorderRec(root->left);
+            postorderRec(root->right);
             cout << root->key << " ";
         }
     }
 };
 
-int main() {
+int main()
+{
     BST tree;
     tree.insert(50);
     tree.insert(30);
@@ -54,7 +68,7 @@ int main() {
     tree.insert(60);
     tree.insert(80);
 
-    tree.postorder(); 
+    tree.postorder();
 
     return 0;
 }
