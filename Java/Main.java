@@ -6,7 +6,7 @@ class Car {
     int engineHP;
 
     Car() {
-        System.out.print(name);
+        // System.out.print(name);
     }
 
     Car(String name, String color, int engineHP) {
@@ -15,8 +15,8 @@ class Car {
         this.engineHP = engineHP;
     }
 
-    private void drive() {
-        System.out.print(name + " Car is driving");
+     void drive() {
+        System.out.println(name + " Car is driving");
     }
 }
 
@@ -36,7 +36,7 @@ class FlyingCar extends Car {
 
 public class Main {
     public static void main(String[] args) {
-        FlyCar fc = new FlyingCar("SuperFly", "Black", 5000);
+        FlyingCar fc = new FlyingCar("SuperFly", "Black", 5000);
         fc.drive();
         fc.fly();
     }
