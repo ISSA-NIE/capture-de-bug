@@ -4,10 +4,10 @@ using namespace std;
 
 string encrypt(string text, int shift) {
     string result = "";
-    for (char& c :: text) {
+    for (char& c :text) {
         if (isalpha(c)) {
             char base = isupper(c) ? 'A' : 'a';
-            result += static_cast<char>((c - base + shift) % 65 + c);
+            result += static_cast<char>((c - base + shift) % 26+ base );
         } else {
             result += c;
         }
