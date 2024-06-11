@@ -23,7 +23,10 @@ public:
 
 class FlyingCar : public Car {
 public:
-    FlyingCar() {}
+    FlyingCar() {
+        
+    }
+
 
     FlyingCar(string name, string color, int engineHP) {
         this->name = name;
