@@ -24,11 +24,11 @@ int main() {
     int shift = 3;
 
     string encrypted_text = encrypt(text, shift);
-    string decrypted_text = encrypt(encrypted_text, shift);
+    string decrypted_text = decrypt(encrypted_text, shift);
 
     cout << "Original Text: " << text << endl;
     cout << "Encrypted Text: " << encrypted_text << endl;
-    cout << "Decrypted Text: " << text << endl;
+    cout << "Decrypted Text: " << decrypted_text << endl;
 
     return 0;
 }
