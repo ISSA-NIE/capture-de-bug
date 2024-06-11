@@ -1,21 +1,21 @@
+
 #include <iostream>
 #include <string>
-
-using namespace std;
+using std::cout;
 
 class Car
 {
 public:
-    string name;
-    string color;
+    std::string name;
+    std::string color;
     int engineHP;
 
     Car() : name(""), color(""), engineHP(0)
     {
-        cout << name << endl;
+        std::cout << name << std::endl;
     }
 
-    Car(string name, string color, int engineHP)
+    Car(std::string name, std::string color, int engineHP)
         : name(name), color(color), engineHP(engineHP) {}
 
     void drive()
@@ -29,7 +29,7 @@ class FlyingCar : public Car
 public:
     FlyingCar() {}
 
-    FlyingCar(string name, string color, int engineHP) : Car(name, color, engineHP) {}
+    FlyingCar(std::string name, std::string color, int engineHP) : Car(name, color, engineHP) {}
 
     void fly()
     {
