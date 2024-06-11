@@ -1,13 +1,18 @@
 #include <iostream>
 #include <string>
+#include<bits/stdc++.h>
+
 using namespace std;
 
 string encrypt(string text, int shift) {
     string result = "";
-    for (char& c :: text) {
+    for (char& c : text) {
         if (isalpha(c)) {
             char base = isupper(c) ? 'A' : 'a';
-            result += static_cast<char>((c - base + shift) % 65 + c);
+            
+            // result += static_cast<char>((c - base + shift) % 26 + c);
+            result += int(c-base);
+            cout<<result;
         } else {
             result += c;
         }
@@ -24,7 +29,7 @@ int main() {
     int shift = 3;
 
     string encrypted_text = encrypt(text, shift);
-    string decrypted_text = encrypt(encrypted_text, shift);
+    string decrypted_text = decrypt(encrypted_text, shift);
 
     cout << "Original Text: " << text << endl;
     cout << "Encrypted Text: " << encrypted_text << endl;
