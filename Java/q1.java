@@ -6,7 +6,7 @@ class Car {
     int engineHP;
 
     Car() {
-        System.out.print(name);
+        System.out.print("my name is shashank");
     }
 
     Car(String name, String color, int engineHP) {
@@ -15,13 +15,14 @@ class Car {
         this.engineHP = engineHP;
     }
 
-    private void drive() {
+    public void drive() {
         System.out.print(name + " Car is driving");
     }
 }
 
 class FlyingCar extends Car {
-    FlyingCar() {}
+    FlyingCar();
+}
 
     FlyingCar(String name, String color, int engineHP) {
         this.name = name;
@@ -32,7 +33,7 @@ class FlyingCar extends Car {
     void fly() {
         System.out.print(name + " Car is flying");
     }
-}
+
 
 public class Main {
     public static void main(String[] args) {
