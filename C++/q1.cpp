@@ -1,5 +1,5 @@
-#include<iostream>
-
+#include<bits/stdc++.h>
+using namespace std;
 class Car {
 public:
     string name;
@@ -18,25 +18,23 @@ public:
     }
 };
 
-class FlyingCar : private Car {
+class FlyingCar : public Car {
 public:
     FlyingCar() {}
 
-    FlyingCar(string name, string color, int engineHP) {
-        this->name = name;
-        this->color = color;
-        this->engineHP = engineHP;
-    }
-
+    FlyingCar(string name, string color, int engineHP) 
+    : Car(name,color,engineHP){}
+        
     void fly() {
         cout << name << " Car is flying\n";
     }
 };
 
 int main() {
-    FlyCar fc("SuperFly", "Black", 5000);
+    FlyingCar fc("SuperFly", "Black", 5000);
     fc.drive();
     fc.fly();
+    return 0;
 }
 
 
